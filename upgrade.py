@@ -1,5 +1,3 @@
-from sub import *
-
 repo = "../backbone.marionette/spec/javascripts"
 
 renameCloseToDestroy = True

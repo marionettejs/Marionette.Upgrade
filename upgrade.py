@@ -5,6 +5,7 @@ renameLayoutToLayoutView = True
 renameItemToChild = True
 apiCleanup = True
 
+from os import *
 
 import sys
 

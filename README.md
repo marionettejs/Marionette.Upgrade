@@ -10,6 +10,10 @@ I realize that this is still a scary process because you'll be covering a lot of
 
 Lastly, this is an experiment in coming up with the right workflow for organizing a large API upgrade. The tool is decidedly very simple, so that it's flexible and can change with time. If you find something works particulary well, please share your successes. If you find that there's a glaring hole, please don't be a stranger.
 
+
+![](http://f.cl.ly/items/1W1M2H0V1n3v1E012S1x/Image%202014-05-14%20at%2010.59.40%20AM.png)
+
+
 ### How to get set up
 1. clone this repo locally
 2. open `upgrade.py` and change the repo variable to point to your project

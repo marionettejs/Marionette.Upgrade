@@ -115,12 +115,12 @@ if (renameLayoutToLayoutView):
   subTerm("Marionette.Layout\.", "Marionette.LayoutView.")
   subTerm("Marionette.Layout\(", "Marionette.LayoutView(")
 
-
 if (renameItemToChild):
   subTerm("itemView", "childView")
   subTerm("itemViewEventPrefix", "childViewEventPrefix")
   subTerm("itemViewOptions", "childViewOptions")
   subTerm("itemEvents", "childEvents")
+  subTerm("itemViewContainer", "childViewContainer")
 
   subMethod("addChildView", "onChildAdd")
   subMethod("removeItemView", "onChildRemove")
@@ -173,5 +173,4 @@ if (apiCleanup):
 #
 # 1. Module's initialize function now accepts these params(options, moduleName, app) it used to be these (moduleName, app, options)
 # 2. regions need to have an element when they're showing a view. Previously you could show a view in a region and if the region didn't have an element on the page at the time, nothing would happen. Now we through an error so you know immediately that you need to fix something.
-# 3. collectionView appendHtml now accepts two arguments instead of three. Previously, we were passing the collectionview in as the first param. That was redundant so we removed it.
 # I'm sure there other changes as well, so don't treat this as an exhaustive list.

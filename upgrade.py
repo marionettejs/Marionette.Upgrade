@@ -1,15 +1,14 @@
 #!/usr/bin/env python
-repo = "../backbone.marionette/spec/javascripts"
+
+from os import *
+import sys
+
+repo = sys.argv[1]
 
 renameCloseToDestroy = True
 renameLayoutToLayoutView = True
 renameItemToChild = True
 apiCleanup = True
-
-from os import *
-
-import sys
-
 
 codemod = "./bin/codemod.py"
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 repo = "../backbone.marionette/spec/javascripts"
 
 renameCloseToDestroy = True

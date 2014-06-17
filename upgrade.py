@@ -112,6 +112,7 @@ if (renameCloseToDestroy):
   subKey('preventClose', 'preventDestroy')
 
 if (renameLayoutToLayoutView):
+  subTerm("Marionette.Layout", "Marionette.LayoutView")
   subTerm("Marionette.Layout\.", "Marionette.LayoutView.")
   subTerm("Marionette.Layout\(", "Marionette.LayoutView(")
 

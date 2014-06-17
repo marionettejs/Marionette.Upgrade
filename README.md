@@ -4,7 +4,7 @@
 
 * 1 `$ git clone https://github.com/marionettejs/Marionette.Upgrade.git`
 * 2 `$ cd Marionette.Upgrade && chmod +x upgrade.py`
-* 3a. If possible remove all of your vendor scripts in your project as these will only generate more noise for your to sort through during your upgrade process.
+* 3a. If possible remove all of your vendor scripts in your project as these will only generate more noise for you to sort through during your upgrade process.
 
 > Set the tool to executable
 

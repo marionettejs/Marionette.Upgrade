@@ -1,5 +1,17 @@
 # Marionette Upgrade
 
+### Using
+
+* 1 `$ git clone https://github.com/marionettejs/Marionette.Upgrade.git`
+* 2 `$ cd Marionette.Upgrade && chmod +x upgrade.py`
+* 3a. If possible remove all of your vendor scripts in your project as these will only generate more noise for your to sort through during your upgrade process.
+
+> Set the tool to executable
+
+* 3b. `$ ./upgrade.py PATH_TO_PROJECT_DIR`
+
+### Why
+
 We made lots of changes to Marionette's API in 2.0. In many ways, we're taking out the garbage that accumulated over the past couple years. With all of these changes, it's easy to wonder if they'll really help or if it's worth it to take the time to fix them. I think it is, there are lots of great projects planned for 2.x that if you're a fan of Marionette you'll want to enjoy.
 
 Even though we made lots of changes to the API, the vast majority of them were simple renamings of methods, events and properties. This tool will help walk you through all of the changes.
@@ -13,11 +25,6 @@ Lastly, this is an experiment in coming up with the right workflow for organizin
 
 ![](http://f.cl.ly/items/1W1M2H0V1n3v1E012S1x/Image%202014-05-14%20at%2010.59.40%20AM.png)
 
-
-### How to get set up
-1. clone this repo locally
-2. open `upgrade.py` and change the repo variable to point to your project
-3. run upgrade.py with this command `python upgrade.py`
 
 ### Additional Information
 

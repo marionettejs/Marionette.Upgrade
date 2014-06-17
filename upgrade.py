@@ -1,14 +1,14 @@
-repo = "../backbone.marionette/spec/javascripts"
+#!/usr/bin/env python
+
+from os import *
+import sys
+
+repo = sys.argv[1]
 
 renameCloseToDestroy = True
 renameLayoutToLayoutView = True
 renameItemToChild = True
 apiCleanup = True
-
-from os import *
-
-import sys
-
 
 codemod = "./bin/codemod.py"
 
@@ -24,15 +24,14 @@ def confirm():
     print "sorry, didn\'t understand"
 
 def sub(search, replace):
-  print "Would you like to replace: %s for %s? [y,n,q]" % (search, replace)
+  print "\n\033[94mReplace:\n\n\033[91m    %s \033[0m with \033[92m %s \033[0m \033[93m\n\n[y,n,q]\033[0m " % (search, replace),
   good = confirm()
   global repo
 
   if good:
-    cmd = ("%s -m -d %s %s %s" % (codemod, repo, search, replace))
-    print cmd
+    cmd = ("%s -m --extensions js,coffee -d %s %s %s" % (codemod, repo, search, replace))
+    print "\n\n"
     system(cmd)
-
 
 def subString(search, replace):
   searchTermS = "\"\'%s\'\"" % (search)
@@ -112,6 +111,7 @@ if (renameCloseToDestroy):
   subKey('preventClose', 'preventDestroy')
 
 if (renameLayoutToLayoutView):
+  subTerm("Marionette.Layout", "Marionette.LayoutView")
   subTerm("Marionette.Layout\.", "Marionette.LayoutView.")
   subTerm("Marionette.Layout\(", "Marionette.LayoutView(")
 
@@ -125,7 +125,9 @@ if (renameItemToChild):
   subMethod("addChildView", "onChildAdd")
   subMethod("removeItemView", "onChildRemove")
   subMethod("getItemView", "getChildView")
+  subTerm("addItemView:", "addChild:")
   subMethod("addItemView", "addChild")
+  subTerm("getItemView:", "getChildView:")
   subMethod("removeItemView", "removeChildView")
   subMethod("renderItemView", "renderChildView")
   subMethod("closeChildren", "destroyChildren")

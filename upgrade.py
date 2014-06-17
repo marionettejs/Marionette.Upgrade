@@ -29,7 +29,7 @@ def sub(search, replace):
   global repo
 
   if good:
-    cmd = ("%s -m -d %s %s %s" % (codemod, repo, search, replace))
+    cmd = ("%s -m --extensions js,coffee -d %s %s %s" % (codemod, repo, search, replace))
     print cmd
     system(cmd)
 

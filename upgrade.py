@@ -30,9 +30,8 @@ def sub(search, replace):
 
   if good:
     cmd = ("%s -m --extensions js,coffee -d %s %s %s" % (codemod, repo, search, replace))
-    print cmd
+    print "\n\n"
     system(cmd)
-
 
 def subString(search, replace):
   searchTermS = "\"\'%s\'\"" % (search)

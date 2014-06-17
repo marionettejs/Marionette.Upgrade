@@ -24,7 +24,7 @@ def confirm():
     print "sorry, didn\'t understand"
 
 def sub(search, replace):
-  print "Would you like to replace: %s for %s? [y,n,q]" % (search, replace)
+  print "\n\033[94mReplace:\n\n\033[91m    %s \033[0m with \033[92m %s \033[0m \033[93m\n\n[y,n,q]\033[0m " % (search, replace),
   good = confirm()
   global repo
 

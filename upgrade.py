@@ -143,6 +143,8 @@ if (renameItemToChild):
   subTerm("onItemview", "onChildview")
 
 if (apiCleanup):
+  subMethod("appendHtml", "attachHtml")
+  subMethod("appendBuffer", "attachBuffer")
   subMethod("renderModel", "_renderRoot")
   subEvent("region:add", "add:region")
   subEvent("region:remove", "remove:region")

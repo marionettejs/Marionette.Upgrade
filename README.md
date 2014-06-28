@@ -18,7 +18,7 @@ Even though we made lots of changes to the API, the vast majority of them were s
 
 The way it works is a lot like `git add -p`. When you run the tool, you'll be shown each change and prompted to approve it, reject it, or edit it.
 
-I realize that this is still a scary process because you'll be covering a lot of ground fairly quickly and the final diff will still be large. I hope that this tool will be a good starting off point. If you're like me, you'll quickly start playing with the regular expressions to fine toon the searches for your project and approach this change-set as methodically as possible in whatever way works out for you.
+I realize that this is still a scary process because you'll be covering a lot of ground fairly quickly and the final diff will still be large. I hope that this tool will be a good starting off point. If you're like me, you'll quickly start playing with the regular expressions to fine-tune the searches for your project and approach this change-set as methodically as possible in whatever way works out for you.
 
 Lastly, this is an experiment in coming up with the right workflow for organizing a large API upgrade. The tool is decidedly very simple, so that it's flexible and can change with time. If you find something works particulary well, please share your successes. If you find that there's a glaring hole, please don't be a stranger.
 

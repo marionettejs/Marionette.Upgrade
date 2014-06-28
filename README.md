@@ -30,10 +30,10 @@ Lastly, this is an experiment in coming up with the right workflow for organizin
 
 + The upgrade tool is organized in three categories based on the type of change. By default, they're all turned on, but it's suggested that you do one change at a time.
 + There's nothing magical here. I wrote each of these changes to work off of simple regexes, if there are additional changes that you think would help feel free to add them. Also, if there are places where I missed things, please file a Pull Request!
-+ This works. I know, I was surprised too. I ran this tool against our v1.8 test suite and it faired surprisingly well. It made over 500 changes and only missed a couple things:
-	+ methods that referenced with spies "foobar" instead of "foobar("
++ This works. I know, I was surprised too. I ran this tool against our v1.8 test suite and it fared surprisingly well. It made over 500 changes and only missed a couple things:
+	+ methods that referenced spies with "foobar" instead of "foobar("
 	+ semantic changes like onBeforeDestroy, which no longer work the same way
-	+ function parameter change like appendHtml losing a param. we could write a regex for this, but meh.
+	+ function parameter changes like appendHtml losing a param. We could write a regex for this, but meh.
 
 
 ### Changes
@@ -42,4 +42,4 @@ The two big changes in v2.0 are the change in collection view from itemViews to 
 
 The childView change should be relatively simple to search out and change and none of the semantics changed.
 
-The close to destroy view change should also be easy to find, but unlike childView the behavior of destroy is different from close, when a view was closed it could be re-opened, now that view's are being destroyed there's no bringing them back. So, when you change your code to start destroying your views, you should double check that you don't try re-open them again.
+The close to destroy view change should also be easy to find, but unlike childView the behavior of destroy is different from close, when a view was closed it could be re-opened, now that view's are being destroyed there's no bringing them back. So, when you change your code to start destroying your views, you should double check that you don't try to re-open them again.

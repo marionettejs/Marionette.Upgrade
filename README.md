@@ -8,6 +8,8 @@
 
 * 3b. `$ ./upgrade.py PATH_TO_PROJECT_DIR`
 
+> Ensure that you are using Python2 when you run the tool, otherwise it will not work.
+
 ### Why
 
 We made lots of changes to Marionette's API in 2.0. In many ways, we're taking out the garbage that accumulated over the past couple years. With all of these changes, it's easy to wonder if they'll really help or if it's worth it to take the time to fix them. I think it is, there are lots of great projects planned for 2.x that if you're a fan of Marionette you'll want to enjoy.

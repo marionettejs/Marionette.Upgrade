@@ -6,8 +6,6 @@
 * 2 `$ cd Marionette.Upgrade && chmod +x upgrade.py`
 * 3a. If possible remove all of your vendor scripts in your project as these will only generate more noise for you to sort through during your upgrade process.
 
-> Set the tool to executable
-
 * 3b. `$ ./upgrade.py PATH_TO_PROJECT_DIR`
 
 ### Why

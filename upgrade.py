@@ -98,6 +98,7 @@ if (renameCloseToDestroy):
   subMethod("close", "destroy")
   subMethod("closeRegions", "destroyRegions")
   subMethod("closeChildren", "destroyChildren")
+  subMethod("onBeforeClose", "onBeforeDestroy")
 
   subEvent('collection:before:close', 'before:destroy')
   subEvent('collection:closed', 'destroy')

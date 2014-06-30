@@ -124,7 +124,6 @@ if (renameItemToChild):
   subTerm("itemViewContainer", "childViewContainer")
 
   subMethod("addChildView", "onChildAdd")
-  subMethod("removeItemView", "onChildRemove")
   subMethod("getItemView", "getChildView")
   subTerm("addItemView:", "addChild:")
   subMethod("addItemView", "addChild")
@@ -166,10 +165,10 @@ if (apiCleanup):
   subEvent("collection:destroy", "destroy:collection")
   subEvent("collection:before:render", "before:render:collection")
   subEvent("collection:rendered", "render")
-  subEvent("before:child:added", "before:add:child")
-  subEvent("after:child:added", "add:child")
-  subEvent("before:child:remove", "before:remove:child")
-  subEvent("child:removed", "remove:child")
+  subEvent("before:item:added", "before:add:child")
+  subEvent("after:item:added", "add:child")
+  subEvent("before:item:remove", "before:remove:child")
+  subEvent("item:removed", "remove:child")
   subEvent("region:add", "add:region")
   subEvent("region:remove", "remove:region")
 

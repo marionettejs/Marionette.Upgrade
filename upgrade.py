@@ -133,6 +133,7 @@ if (renameItemToChild):
   subMethod("closeChildren", "destroyChildren")
   subMethod("resetItemViewContainer", "resetChildViewContainer")
   subMethod("getItemViewContainer", "getChildViewContainer")
+  subMethod("buildItemView", "buildChildView")
 
   subEvent("before:item:added", "before:add:child")
   subEvent("after:item:added", "add:child")

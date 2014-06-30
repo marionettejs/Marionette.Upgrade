@@ -148,6 +148,8 @@ if (apiCleanup):
   subMethod("appendHtml", "attachHtml")
   subMethod("appendBuffer", "attachBuffer")
   subMethod("renderModel", "_renderRoot")
+  subMethod("ensureEl", "_ensureElement")
+
   subEvent("region:add", "add:region")
   subEvent("region:remove", "remove:region")
   subEvent("initialize:before", "before:start")

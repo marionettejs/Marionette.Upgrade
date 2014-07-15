@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from os import *
+import os
 import sys
 
 repo = sys.argv[1]
@@ -10,7 +11,7 @@ renameLayoutToLayoutView = True
 renameItemToChild = True
 apiCleanup = True
 
-codemod = "./bin/codemod.py"
+codemod = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bin", "codemod.py")
 
 def confirm():
   ch = sys.stdin.read(1)

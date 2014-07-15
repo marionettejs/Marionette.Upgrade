@@ -4,7 +4,8 @@ from os import *
 import os
 import sys
 
-repo = sys.argv[1]
+repo        = sys.argv[1]
+correctAll  = len(sys.argv) > 2 and sys.argv[2] == "--all"
 
 renameCloseToDestroy = True
 renameLayoutToLayoutView = True
@@ -26,7 +27,7 @@ def confirm():
 
 def sub(search, replace):
   print "\n\033[94mReplace:\n\n\033[91m    %s \033[0m with \033[92m %s \033[0m \033[93m\n\n[y,n,q]\033[0m " % (search, replace),
-  good = confirm()
+  good = correctAll or not confirm()
   global repo
 
   if good:

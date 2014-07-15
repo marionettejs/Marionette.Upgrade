@@ -12,7 +12,7 @@ renameLayoutToLayoutView = True
 renameItemToChild = True
 apiCleanup = True
 
-codemod = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bin", "codemod.py")
+codemodPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bin", "codemod.py")
 
 def confirm():
   ch = sys.stdin.read(1)
@@ -31,7 +31,7 @@ def sub(search, replace):
   global repo
 
   if good:
-    cmd = ("%s -m --extensions js,coffee -d %s %s %s" % (codemod, repo, search, replace))
+    cmd = ("%s -m --extensions js,coffee -d %s %s %s" % (codemodPath, repo, search, replace))
     print "\n\n"
     system(cmd)
 

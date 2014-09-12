@@ -2,8 +2,17 @@
 
 from os import *
 import sys
+import argparse
 
-repo = sys.argv[1]
+parser = argparse.ArgumentParser(description="Upgrade Marionette apps from 1.x to 2.x")
+parser.add_argument("-a", "--all", required=False, action='store_true', help="Skip y/n/q prompt and search for all changes. You will be able to review changes before committing.")
+parser.add_argument("path", help="Path to your Marionette app to upgrade")
+args = parser.parse_args()
+
+print args.path
+if ( path.exists(args.path) and path.isdir(args.path) ) is False:
+  parser.print_help()
+  sys.exit("\nPath does not exist.\n")
 
 renameCloseToDestroy = True
 renameLayoutToLayoutView = True
@@ -13,6 +22,9 @@ apiCleanup = True
 codemod = "./bin/codemod.py"
 
 def confirm():
+  if args.all == True:
+    return True
+
   ch = sys.stdin.readline().rstrip('\n')
   if ch == "\n" or ch == "y":
     return True
@@ -26,10 +38,9 @@ def confirm():
 def sub(search, replace):
   print "\n\033[94mReplace:\n\n\033[91m    %s \033[0m with \033[92m %s \033[0m \033[93m\n\n[y,n,q]\033[0m " % (search, replace),
   good = confirm()
-  global repo
 
   if good:
-    cmd = ("%s -m --extensions js,coffee -d %s %s %s" % (codemod, repo, search, replace))
+    cmd = ("%s -m --extensions js,coffee -d %s %s %s" % (codemod, args.path, search, replace))
     print "\n\n"
     system(cmd)
 

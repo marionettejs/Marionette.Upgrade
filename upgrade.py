@@ -13,7 +13,7 @@ apiCleanup = True
 codemod = "./bin/codemod.py"
 
 def confirm():
-  ch = sys.stdin.read(1)
+  ch = sys.stdin.readline().rstrip('\n')
   if ch == "\n" or ch == "y":
     return True
   if ch == "n":

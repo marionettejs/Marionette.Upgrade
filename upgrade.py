@@ -6,13 +6,13 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Upgrade Marionette apps from 1.x to 2.x")
 parser.add_argument("-a", "--all", required=False, action='store_true', help="Skip y/n/q prompt and search for all changes. You will be able to review changes before committing.")
-parser.add_argument("path", help="Path to your Marionette app to upgrade")
+parser.add_argument("path", help="Directory of your Marionette app to upgrade")
 args = parser.parse_args()
 
 print args.path
-if ( path.exists(args.path) and path.isdir(args.path) ) is False:
+if path.isdir(args.path) is False:
   parser.print_help()
-  sys.exit("\nPath does not exist.\n")
+  sys.exit("\nDirectory does not exist: " + args.path + "\n")
 
 renameCloseToDestroy = True
 renameLayoutToLayoutView = True

@@ -43,3 +43,10 @@ The two big changes in v2.0 are the change in collection view from itemViews to 
 The childView change should be relatively simple to search out and change and none of the semantics changed.
 
 The close to destroy view change should also be easy to find, but unlike childView the behavior of destroy is different from close, when a view was closed it could be re-opened, now that view's are being destroyed there's no bringing them back. So, when you change your code to start destroying your views, you should double check that you don't try to re-open them again.
+
+
+### Changelog
+
+* [Overview of v2.0 Changes](https://docs.google.com/document/d/1fuXb9N5LwmdPn-teMwAo3c8JTx6ifUowbqFY1NNSdp8/edit#)
+* [v2.0 Changelog Details](https://github.com/Puppets/marionette-changelog-detail)
+* [Latest Changelog](https://github.com/marionettejs/backbone.marionette/blob/master/changelog.md)

@@ -19,7 +19,7 @@ renameLayoutToLayoutView = True
 renameItemToChild = True
 apiCleanup = True
 
-codemod = "./bin/codemod.py"
+codemod = "%s/bin/codemod.py" %  path.dirname(__file__)
 
 def confirm():
   if args.all == True:

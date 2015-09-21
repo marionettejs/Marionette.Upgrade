@@ -53,8 +53,8 @@ def subString(search, replace):
   sub(searchTermD, replaceTermD)
 
 def subMethod(search, replace):
-  searchTerm = "'.%s\\('" % (search)
-  replaceTerm  = "'.%s('" % (replace)
+  searchTerm = "'(\.|@)%s\\('" % (search)
+  replaceTerm  = "'\\1%s('" % (replace)
   sub(searchTerm, replaceTerm)
 
 def subEvent(search, replace):
